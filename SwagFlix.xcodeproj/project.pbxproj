@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0908DCFE1D9D5A9A003801C2 /* TvShow+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0908DCFC1D9D5A9A003801C2 /* TvShow+CoreDataClass.swift */; };
+		0908DCFF1D9D5A9A003801C2 /* TvShow+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0908DCFD1D9D5A9A003801C2 /* TvShow+CoreDataProperties.swift */; };
+		0908DD011D9D5AD4003801C2 /* Model_TvShow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0908DD001D9D5AD4003801C2 /* Model_TvShow.swift */; };
 		9D1BD78F1D9C37F3007C00BD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D1BD78E1D9C37F3007C00BD /* AppDelegate.swift */; };
 		9D1BD7911D9C37F3007C00BD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D1BD7901D9C37F3007C00BD /* ViewController.swift */; };
 		9D1BD7941D9C37F3007C00BD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D1BD7921D9C37F3007C00BD /* Main.storyboard */; };
@@ -16,6 +19,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0908DCFC1D9D5A9A003801C2 /* TvShow+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TvShow+CoreDataClass.swift"; sourceTree = "<group>"; };
+		0908DCFD1D9D5A9A003801C2 /* TvShow+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TvShow+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		0908DD001D9D5AD4003801C2 /* Model_TvShow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model_TvShow.swift; sourceTree = "<group>"; };
 		9D1BD78B1D9C37F3007C00BD /* SwagFlix.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwagFlix.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D1BD78E1D9C37F3007C00BD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9D1BD7901D9C37F3007C00BD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -56,6 +62,8 @@
 		9D1BD78D1D9C37F3007C00BD /* SwagFlix */ = {
 			isa = PBXGroup;
 			children = (
+				0908DCFC1D9D5A9A003801C2 /* TvShow+CoreDataClass.swift */,
+				0908DCFD1D9D5A9A003801C2 /* TvShow+CoreDataProperties.swift */,
 				9D1BD78E1D9C37F3007C00BD /* AppDelegate.swift */,
 				9D1BD7901D9C37F3007C00BD /* ViewController.swift */,
 				9D1BD7921D9C37F3007C00BD /* Main.storyboard */,
@@ -63,6 +71,7 @@
 				9D1BD79A1D9C37F3007C00BD /* LaunchScreen.storyboard */,
 				9D1BD79D1D9C37F3007C00BD /* Info.plist */,
 				9D1BD7951D9C37F3007C00BD /* SwagFlix.xcdatamodeld */,
+				0908DD001D9D5AD4003801C2 /* Model_TvShow.swift */,
 			);
 			path = SwagFlix;
 			sourceTree = "<group>";
@@ -139,8 +148,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0908DCFE1D9D5A9A003801C2 /* TvShow+CoreDataClass.swift in Sources */,
 				9D1BD7911D9C37F3007C00BD /* ViewController.swift in Sources */,
+				0908DCFF1D9D5A9A003801C2 /* TvShow+CoreDataProperties.swift in Sources */,
 				9D1BD7971D9C37F3007C00BD /* SwagFlix.xcdatamodeld in Sources */,
+				0908DD011D9D5AD4003801C2 /* Model_TvShow.swift in Sources */,
 				9D1BD78F1D9C37F3007C00BD /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -301,6 +313,7 @@
 				9D1BD7A21D9C37F3007C00BD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

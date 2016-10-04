@@ -13,13 +13,87 @@ import CoreData
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    var context: NSManagedObjectContext?
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+
+        let modelUrl = Bundle.main.url(forResource:"SwagFlix", withExtension:"momd")
+        let modelSchema = NSManagedObjectModel(contentsOf: modelUrl!)
+        let storeCoordinate = NSPersistentStoreCoordinator(managedObjectModel: modelSchema!)
+        let documentUrl = FileManager.default.urls(for: .documentDirectory, in:.userDomainMask).first!
+        let dbURL = documentUrl.appendingPathComponent("SwagFlix.db")
+        
+        
+        print("modeUrl : \(modelUrl)")
+        print("modeSchema : \(modelSchema)")
+        
+        do{
+            try storeCoordinate.addPersistentStore(ofType: NSSQLiteStoreType, configurationName: nil, at: dbURL, options: nil)
+            
+            let objectContext = NSManagedObjectContext(concurrencyType: .mainQueueConcurrencyType)
+            objectContext.persistentStoreCoordinator = storeCoordinate
+            self.context = objectContext
+            
+        }catch{
+            print("?")
+        }
+
+        addTvShow()
+        getTvShow()
+        
         return true
     }
-
+    
+    func addTvShow(){
+        let tvShow = NSEntityDescription.insertNewObject(forEntityName: "TvShow", into: self.context!) as! TvShow
+        
+        tvShow.title_show = "Professeur SWAG"
+        tvShow.description_show = "Les extraordinaires aventures de Pr SWAG"
+        tvShow.picture_show = "PrSWAG.png"
+        tvShow.frequency_out_show = 1
+        tvShow.day_out_show = 1
+        tvShow.hour_alert = 1
+        tvShow.fav = 1
+        
+        
+        try? self.context?.save()
+        
+    }
+    
+    func deleteTvShow(){
+        
+    }
+    
+    func editTvShow(){
+        
+    }
+    
+    func getTvShow(){
+        /*
+         let request = NSFetchRequest<Person>(entityName: "Person")
+         let storeResult = try? self.context?.execute(request) as! NSAsynchronousFetchResult<Person>
+         for p in (storeResult?.finalResult)! {
+         print("\(p.firstname) \(p.lastname)")
+         }
+         */
+        
+        /*
+         let request = NSFetchRequest<Person>(entityName: "Person")
+         let persons = try? self.context?.fetch(request)
+         for p in persons!!{
+         print("\(p.firstname) \(p.lastname)")
+         }
+         */
+        
+        let request = NSFetchRequest<TvShow>(entityName: "TvShow")
+        let shows = try? (self.context?.fetch(request))!
+        for show in shows!{
+            print("myShow"+"\(show.title_show) \(show.description_show)")
+        }
+    }
+    
+    
     func applicationWillResignActive(_ application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
         // Use this method to pause ongoing tasks, disable timers, and invalidate graphics rendering callbacks. Games should use this method to pause the game.
