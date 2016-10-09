@@ -16,6 +16,10 @@ class ShowTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        let logo = UIImage(named: "icon-bar.png")
+        let imageview = UIImageView(image: logo)
+        self.navigationItem.titleView = imageview
+        //title = "SWAGFLIX"
         print("Shows"+String(shows.count))
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -45,10 +49,14 @@ class ShowTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let withIdentifier = "reuseIdentifier"
-        let cell = tableView.dequeueReusableCell(withIdentifier: withIdentifier, for: indexPath)
+        //let cell = tableView.dequeueReusableCell(withIdentifier: withIdentifier, for: indexPath)
+          let cell = tableView.dequeueReusableCell(withIdentifier: withIdentifier, for: indexPath) as! ShowTableViewCell
+        
 
         // Configure the cell...
-        cell.textLabel?.text = shows[indexPath.row]
+        //cell.textLabel?.text = shows[indexPath.row]
+        cell.titleShow.text = shows[indexPath.row]
+        cell.descriptionShow.text = shows[indexPath.row]
 
         return cell
     }
