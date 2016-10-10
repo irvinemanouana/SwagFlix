@@ -26,22 +26,23 @@
                                             <frame key="frameInset" minX="139" minY="8" width="96.61%" maxY="130"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES"/>
                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
-                                            <nil key="textColor"/>
+                                            <color key="textColor" red="0.59112823009490967" green="0.068708531558513641" blue="0.03293335810303688" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="description" textAlignment="justified" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tpV-EF-Isv">
                                             <frame key="frameInset" minX="139" minY="37" width="96.61%" maxY="92"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES"/>
                                             <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
+                                            <color key="textColor" red="0.59112823010000004" green="0.068708531559999994" blue="0.032933358099999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="highlightedColor" red="0.59112823010000004" green="0.068708531559999994" blue="0.032933358099999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </label>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="dardevil.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="CVc-O7-iBq">
-                                            <frame key="frameInset" minX="17" minY="8" width="31.84%" maxY="19"/>
+                                            <frame key="frameInset" minX="17" minY="14" width="31.84%" maxY="13"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES"/>
                                         </imageView>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <outlet property="descriptionShow" destination="tpV-EF-Isv" id="Ux7-sa-JOp"/>
                                     <outlet property="imageShow" destination="CVc-O7-iBq" id="71n-xq-ifn"/>
@@ -65,10 +66,11 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="1TN-B1-DdR" customClass="NavigationViewController" customModule="SwagFlix" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Qgq-Ro-XKd">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="Qgq-Ro-XKd">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>

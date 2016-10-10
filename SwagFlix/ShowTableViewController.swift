@@ -54,8 +54,8 @@ class ShowTableViewController: UITableViewController {
         
 
         // Configure the cell...
-        //cell.textLabel?.text = shows[indexPath.row]
         cell.titleShow.text = shows[indexPath.row]
+        //cell.titleShow.adjustsFontSizeToFitWidth = true
         cell.descriptionShow.text = shows[indexPath.row]
 
         return cell
