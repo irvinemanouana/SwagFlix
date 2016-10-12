@@ -13,85 +13,57 @@ import CoreData
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-    var context: NSManagedObjectContext?
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
 
-        let modelUrl = Bundle.main.url(forResource:"SwagFlix", withExtension:"momd")
-        let modelSchema = NSManagedObjectModel(contentsOf: modelUrl!)
-        let storeCoordinate = NSPersistentStoreCoordinator(managedObjectModel: modelSchema!)
-        let documentUrl = FileManager.default.urls(for: .documentDirectory, in:.userDomainMask).first!
-        let dbURL = documentUrl.appendingPathComponent("SwagFlix.db")
+        let dataHelper = TvShowDataHelper.sharedInstance
         
         
-        print("modeUrl : \(modelUrl)")
-        print("modeSchema : \(modelSchema)")
+        //--------------------------------
+        //Insertion
+        //--------------------------------    
+        /*
+        let myTvShow = TvShowClass()
+        myTvShow.title = "Professeur SWAG "
+        myTvShow.desc = "Les extraordinaires aventures de Pr SWAG"
+        myTvShow.picture = "PrSWAG.png"
+        myTvShow.frequecy_out = 1
+        myTvShow.day_out = 1
+        myTvShow.hour_alert = 1
+        myTvShow.fav = 1
+        */
+        //dataHelper.addTvShow(myTvShowClass: myTvShow)
         
-        do{
-            try storeCoordinate.addPersistentStore(ofType: NSSQLiteStoreType, configurationName: nil, at: dbURL, options: nil)
-            
-            let objectContext = NSManagedObjectContext(concurrencyType: .mainQueueConcurrencyType)
-            objectContext.persistentStoreCoordinator = storeCoordinate
-            self.context = objectContext
-            
-        }catch{
-            print("?")
+        //--------------------------------
+        //Affichage
+        //--------------------------------
+        dataHelper.displpayAllTvShow()
+        
+        //--------------------------------
+        //Recuperation
+        //--------------------------------
+        let tvShowsClass :[TvShowClass] = dataHelper.getAllTvShows();
+        
+        //--------------------------------
+        //Suppression d'un element (le dernier)
+        //--------------------------------
+        //if(tvShowsClass.count>0){
+        //    dataHelper.deleteTvShow(myTvShowClass: tvShowsClass.last!)
+        //}
+        
+        
+        //--------------------------------
+        //Mise a jour d'un element (le dernier)
+        //--------------------------------
+        if(tvShowsClass.count>0){
+            tvShowsClass.last!.title = "Professeur SWAGGY"
+            dataHelper.updateTvShow(myTvShowClass: tvShowsClass.last!)
         }
-
-        addTvShow()
-        getTvShow()
         
         return true
     }
     
-    func addTvShow(){
-        let tvShow = NSEntityDescription.insertNewObject(forEntityName: "TvShow", into: self.context!) as! TvShow
-        
-        tvShow.title_show = "Professeur SWAG"
-        tvShow.description_show = "Les extraordinaires aventures de Pr SWAG"
-        tvShow.picture_show = "PrSWAG.png"
-        tvShow.frequency_out_show = 1
-        tvShow.day_out_show = 1
-        tvShow.hour_alert = 1
-        tvShow.fav = 1
-        
-        
-        try? self.context?.save()
-        
-    }
-    
-    func deleteTvShow(){
-        
-    }
-    
-    func editTvShow(){
-        
-    }
-    
-    func getTvShow(){
-        /*
-         let request = NSFetchRequest<Person>(entityName: "Person")
-         let storeResult = try? self.context?.execute(request) as! NSAsynchronousFetchResult<Person>
-         for p in (storeResult?.finalResult)! {
-         print("\(p.firstname) \(p.lastname)")
-         }
-         */
-        
-        /*
-         let request = NSFetchRequest<Person>(entityName: "Person")
-         let persons = try? self.context?.fetch(request)
-         for p in persons!!{
-         print("\(p.firstname) \(p.lastname)")
-         }
-         */
-        
-        let request = NSFetchRequest<TvShow>(entityName: "TvShow")
-        let shows = try? (self.context?.fetch(request))!
-        for show in shows!{
-            print("myShow"+"\(show.title_show) \(show.description_show)")
-        }
-    }
     
     
     func applicationWillResignActive(_ application: UIApplication) {

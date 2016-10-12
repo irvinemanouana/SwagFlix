@@ -11,5 +11,6 @@ import CoreData
 
 
 public class TvShow: NSManagedObject {
-
+    
+    
 }

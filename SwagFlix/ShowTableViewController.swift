@@ -16,6 +16,15 @@ class ShowTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
+        let dataHelper = TvShowDataHelper.sharedInstance
+        let tvShows :[TvShowClass] = dataHelper.getAllTvShows()
+        for show in tvShows{
+            shows.append(String(describing: show.title))
+        }
+        
+        
         let logo = UIImage(named: "icon-bar.png")
         let imageview = UIImageView(image: logo)
         self.navigationItem.titleView = imageview

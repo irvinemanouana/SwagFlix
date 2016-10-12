@@ -2,7 +2,7 @@
 //  TvShow+CoreDataProperties.swift
 //  SwagFlix
 //
-//  Created by Akiro on 29/09/2016.
+//  Created by Akiro on 12/10/2016.
 //  Copyright © 2016 Manouanachristopher. All rights reserved.
 //
 
@@ -16,12 +16,12 @@ extension TvShow {
         return NSFetchRequest<TvShow>(entityName: "TvShow");
     }
 
-    @NSManaged public var description_show: String?
-    @NSManaged public var title_show: String?
-    @NSManaged public var picture_show: String?
-    @NSManaged public var fav: Int32
-    @NSManaged public var frequency_out_show: Int32
     @NSManaged public var day_out_show: Int32
-    @NSManaged public var hour_alert: Int32
+    @NSManaged public var description_show: String?
+    @NSManaged public var frequency_out_show: Int32
+    @NSManaged public var hour_alert_show: Int32
+    @NSManaged public var picture_show: String?
+    @NSManaged public var title_show: String?
+    @NSManaged public var fav_show: Int32
 
 }
