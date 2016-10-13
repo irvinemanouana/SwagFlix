@@ -9,7 +9,7 @@
         <!--Show Table View Controller-->
         <scene sceneID="TZY-oT-C4c">
             <objects>
-                <tableViewController id="d5w-La-qp1" customClass="ShowTableViewController" customModule="SwagFlix" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="ShowTableViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="d5w-La-qp1" customClass="ShowTableViewController" customModule="SwagFlix" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="173" sectionHeaderHeight="28" sectionFooterHeight="28" id="aIc-qO-0wQ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -19,7 +19,7 @@
                                 <rect key="frame" x="0.0" y="92" width="375" height="173"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="BAy-7S-3bD" id="mUg-mF-LkZ">
-                                    <frame key="frameInset" width="375" height="172"/>
+                                    <frame key="frameInset" width="375" height="172.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Titre" textAlignment="justified" lineBreakMode="characterWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a81-s7-RCf">
@@ -37,7 +37,7 @@
                                             <color key="highlightedColor" red="0.59112823010000004" green="0.068708531559999994" blue="0.032933358099999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </label>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="dardevil.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="CVc-O7-iBq">
-                                            <frame key="frameInset" minX="17" minY="14" width="31.84%" maxY="13"/>
+                                            <frame key="frameInset" minX="17" minY="14" width="31.70%" maxY="13"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES"/>
                                         </imageView>
                                     </subviews>
@@ -47,6 +47,7 @@
                                     <outlet property="descriptionShow" destination="tpV-EF-Isv" id="Ux7-sa-JOp"/>
                                     <outlet property="imageShow" destination="CVc-O7-iBq" id="71n-xq-ifn"/>
                                     <outlet property="titleShow" destination="a81-s7-RCf" id="Rbo-Ds-cMk"/>
+                                    <segue destination="BmP-eh-qoo" kind="show" identifier="goToDetails" id="Atc-B5-Iub"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -59,14 +60,67 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="95y-CQ-cWc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1055.2" y="-295.50224887556226"/>
+            <point key="canvasLocation" x="1239" y="-296"/>
+        </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="t3G-Kz-NPK">
+            <objects>
+                <viewController storyboardIdentifier="DetailViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BmP-eh-qoo" customClass="DetailViewController" customModule="SwagFlix" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="hcF-xd-AN8"/>
+                        <viewControllerLayoutGuide type="bottom" id="me4-N1-fmj"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="cCa-Uo-Kzl">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="x41-f2-9CN">
+                                <frame key="frameInset" minY="64" width="375" height="166"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="2aC-BT-SR9"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LqR-zN-Hve" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3741.5999999999999" y="-90.404797601199405"/>
+        </scene>
+        <!--Add Show View Controller-->
+        <scene sceneID="lLk-0V-GGQ">
+            <objects>
+                <viewController storyboardIdentifier="AddShowViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="wl8-q8-Aa5" customClass="AddShowViewController" customModule="SwagFlix" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="aD6-b7-aRI"/>
+                        <viewControllerLayoutGuide type="bottom" id="YQR-Zl-zPm"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="UUa-yU-axr">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zOf-X0-xWr">
+                                <frame key="frameInset" minX="166" minY="323" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="bF8-zy-0EC"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PUr-9F-2nZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1055" y="447"/>
         </scene>
         <!--Navigation View Controller-->
         <scene sceneID="3bB-Md-yWc">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="1TN-B1-DdR" customClass="NavigationViewController" customModule="SwagFlix" customModuleProvider="target" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="1TN-B1-DdR" customClass="NavigationViewController" customModule="SwagFlix" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="Qgq-Ro-XKd">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Qgq-Ro-XKd">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -81,8 +135,47 @@
             </objects>
             <point key="canvasLocation" x="116" y="-295.50224887556226"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="gVo-Cw-k8I">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="i5o-nf-ac3" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="fyZ-OJ-lGi">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="wl8-q8-Aa5" kind="relationship" relationship="rootViewController" id="1Dj-dg-Zbu"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tQN-gb-N9U" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="116" y="447"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Sjn-bY-w3c">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="tlL-q1-xXw" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="tYa-oa-WpE">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BmP-eh-qoo" kind="relationship" relationship="rootViewController" id="PeB-B0-oNj"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mVq-iT-86e" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2738" y="447"/>
+        </scene>
     </scenes>
     <resources>
         <image name="dardevil.jpg" width="450" height="600"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="Atc-B5-Iub"/>
+    </inferredMetricsTieBreakers>
 </document>

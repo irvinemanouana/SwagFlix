@@ -13,7 +13,7 @@ class ShowTableViewController: UITableViewController {
     var shows : [String] = ["Luke Cage","Dardevil","Orange is the new Black","Narcos","Sens8","Strange Things","Sherlock","Jessica Jones", "Iron Fist"]
     
     var indentifier : String = "reuseIdentifier"
-    var newShow: UIBarButtonItem = UIBarButtonItem(title: "Ajouter", style: UIBarButtonItemStyle.plain, target: self, action:nil)
+    var newShow: UIBarButtonItem = UIBarButtonItem(title: "Ajouter", style: UIBarButtonItemStyle.plain, target: self, action:#selector(ShowTableViewController.goToAddShow(_:)))
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,6 +24,7 @@ class ShowTableViewController: UITableViewController {
             shows.append(String(describing: show.title))
         }
         navigationItem.rightBarButtonItem = newShow
+    
         
         let logo = UIImage(named: "icon-bar.png")
         let imageview = UIImageView(image: logo)
@@ -42,6 +43,10 @@ class ShowTableViewController: UITableViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func goToAddShow(_ sender: AnyObject) {
+        print("GO")
     }
 
     // MARK: - Table view data source
@@ -70,6 +75,20 @@ class ShowTableViewController: UITableViewController {
 
         return cell
     }
+    
+    /*override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print(shows[indexPath.item])
+        let detail = self.storyboard?.instantiateViewController(withIdentifier: "DetailViewController") as! DetailViewController
+        self.navigationController?.pushViewController(detail, animated: true)
+    }*/
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "goToDetails" {
+            (segue.destination as! DetailViewController).ShowName = "Luke"
+        }
+    
+    }
+    
  
 
     /*

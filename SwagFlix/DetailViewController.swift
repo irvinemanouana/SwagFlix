@@ -1,25 +1,25 @@
 //
-//  NavigationViewController.swift
+//  DetailViewController.swift
 //  SwagFlix
 //
-//  Created by Manouana on 07/10/2016.
+//  Created by Manouana on 14/10/2016.
 //  Copyright © 2016 Manouanachristopher. All rights reserved.
 //
 
 import UIKit
 
-class NavigationViewController: UINavigationController {
-
-       var newShow: UIBarButtonItem = UIBarButtonItem(title: "test", style: UIBarButtonItemStyle.plain, target: self, action:nil)
+class DetailViewController: UIViewController {
+    var ShowName : String!
+    var Description: String?
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        self.navigationItem.leftBarButtonItem = newShow
+
         // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
+        print(ShowName)
         // Dispose of any resources that can be recreated.
     }
     
