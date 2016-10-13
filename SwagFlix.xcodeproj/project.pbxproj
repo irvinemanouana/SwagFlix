@@ -16,6 +16,8 @@
 		9D1BD7971D9C37F3007C00BD /* SwagFlix.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9D1BD7951D9C37F3007C00BD /* SwagFlix.xcdatamodeld */; };
 		9D1BD7991D9C37F3007C00BD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9D1BD7981D9C37F3007C00BD /* Assets.xcassets */; };
 		9D1BD79C1D9C37F3007C00BD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D1BD79A1D9C37F3007C00BD /* LaunchScreen.storyboard */; };
+		9D6E688B1DAEE507001FCE89 /* AddShowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D6E688A1DAEE507001FCE89 /* AddShowViewController.swift */; };
+		9D6E688D1DAEE535001FCE89 /* AddShowView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9D6E688C1DAEE535001FCE89 /* AddShowView.xib */; };
 		9D969CEB1DAA6FFE00EE2BF0 /* localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9D969CEA1DAA6FFE00EE2BF0 /* localizable.strings */; };
 		9D969CED1DAA721300EE2BF0 /* ShowTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D969CEC1DAA721300EE2BF0 /* ShowTableViewCell.swift */; };
 		9D969CEF1DAA816F00EE2BF0 /* dardevil.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9D969CEE1DAA816F00EE2BF0 /* dardevil.jpg */; };
@@ -38,6 +40,8 @@
 		9D1BD7981D9C37F3007C00BD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9D1BD79B1D9C37F3007C00BD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9D1BD79D1D9C37F3007C00BD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9D6E688A1DAEE507001FCE89 /* AddShowViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddShowViewController.swift; sourceTree = "<group>"; };
+		9D6E688C1DAEE535001FCE89 /* AddShowView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddShowView.xib; sourceTree = "<group>"; };
 		9D969CEA1DAA6FFE00EE2BF0 /* localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = localizable.strings; sourceTree = "<group>"; };
 		9D969CEC1DAA721300EE2BF0 /* ShowTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowTableViewCell.swift; sourceTree = "<group>"; };
 		9D969CEE1DAA816F00EE2BF0 /* dardevil.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = dardevil.jpg; sourceTree = "<group>"; };
@@ -112,6 +116,8 @@
 				9DF2A2E01DA7A50A0083F9F6 /* NavigationViewController.swift */,
 				9D969CEC1DAA721300EE2BF0 /* ShowTableViewCell.swift */,
 				9D969CEA1DAA6FFE00EE2BF0 /* localizable.strings */,
+				9D6E688A1DAEE507001FCE89 /* AddShowViewController.swift */,
+				9D6E688C1DAEE535001FCE89 /* AddShowView.xib */,
 			);
 			path = SwagFlix;
 			sourceTree = "<group>";
@@ -175,6 +181,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9D6E688D1DAEE535001FCE89 /* AddShowView.xib in Resources */,
 				9DF2A2E61DA7E2730083F9F6 /* swagflix_1.png in Resources */,
 				9DF2A2E71DA7E2730083F9F6 /* swagflix-2.png in Resources */,
 				9DF2A2E91DA7E7540083F9F6 /* icon-bar.png in Resources */,
@@ -200,6 +207,7 @@
 				095EFF061DADC82E004DB999 /* TvShowDataHelper.swift in Sources */,
 				9DF2A2E11DA7A50A0083F9F6 /* NavigationViewController.swift in Sources */,
 				095EFF051DADC82E004DB999 /* TvShowClass.swift in Sources */,
+				9D6E688B1DAEE507001FCE89 /* AddShowViewController.swift in Sources */,
 				9D969CED1DAA721300EE2BF0 /* ShowTableViewCell.swift in Sources */,
 				9D1BD78F1D9C37F3007C00BD /* AppDelegate.swift in Sources */,
 			);

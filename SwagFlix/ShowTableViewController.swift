@@ -13,17 +13,17 @@ class ShowTableViewController: UITableViewController {
     var shows : [String] = ["Luke Cage","Dardevil","Orange is the new Black","Narcos","Sens8","Strange Things","Sherlock","Jessica Jones", "Iron Fist"]
     
     var indentifier : String = "reuseIdentifier"
+    var newShow: UIBarButtonItem = UIBarButtonItem(title: "Ajouter", style: UIBarButtonItemStyle.plain, target: self, action:nil)
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         
         let dataHelper = TvShowDataHelper.sharedInstance
         let tvShows :[TvShowClass] = dataHelper.getAllTvShows()
         for show in tvShows{
             shows.append(String(describing: show.title))
         }
-        
+        navigationItem.rightBarButtonItem = newShow
         
         let logo = UIImage(named: "icon-bar.png")
         let imageview = UIImageView(image: logo)
@@ -37,7 +37,8 @@ class ShowTableViewController: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
-
+    
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
