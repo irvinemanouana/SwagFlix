@@ -76,20 +76,15 @@ class ShowTableViewController: UITableViewController {
         return cell
     }
     
-    /*override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print(shows[indexPath.item])
         let detail = self.storyboard?.instantiateViewController(withIdentifier: "DetailViewController") as! DetailViewController
+        //Passing Data Between Controllers 
+        detail.showTitle = shows[indexPath.item]
         self.navigationController?.pushViewController(detail, animated: true)
-    }*/
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "goToDetails" {
-            (segue.destination as! DetailViewController).ShowName = "Luke"
-        }
-    
     }
     
- 
+    
 
     /*
     // Override to support conditional editing of the table view.

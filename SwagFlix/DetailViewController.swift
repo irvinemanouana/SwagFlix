@@ -9,17 +9,17 @@
 import UIKit
 
 class DetailViewController: UIViewController {
-    var ShowName : String!
-    var Description: String?
+    var showTitle = ""
+    @IBOutlet weak var titleLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        titleLabel.text = showTitle
+       
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        print(ShowName)
+        
         // Dispose of any resources that can be recreated.
     }
     

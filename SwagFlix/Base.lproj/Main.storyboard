@@ -47,7 +47,6 @@
                                     <outlet property="descriptionShow" destination="tpV-EF-Isv" id="Ux7-sa-JOp"/>
                                     <outlet property="imageShow" destination="CVc-O7-iBq" id="71n-xq-ifn"/>
                                     <outlet property="titleShow" destination="a81-s7-RCf" id="Rbo-Ds-cMk"/>
-                                    <segue destination="BmP-eh-qoo" kind="show" identifier="goToDetails" id="Atc-B5-Iub"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -74,14 +73,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="x41-f2-9CN">
-                                <frame key="frameInset" minY="64" width="375" height="166"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fVm-8F-vhu">
+                                <frame key="frameInset" minX="16" minY="131" width="42" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="2aC-BT-SR9"/>
+                    <connections>
+                        <outlet property="titleLabel" destination="fVm-8F-vhu" id="xV0-lg-FBw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LqR-zN-Hve" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -175,7 +180,4 @@
     <resources>
         <image name="dardevil.jpg" width="450" height="600"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="Atc-B5-Iub"/>
-    </inferredMetricsTieBreakers>
 </document>
