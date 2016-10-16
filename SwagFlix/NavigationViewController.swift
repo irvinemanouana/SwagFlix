@@ -8,14 +8,23 @@
 
 import UIKit
 
-class NavigationViewController: UINavigationController {
+class NavigationViewController: UINavigationController,UIViewControllerTransitioningDelegate{
 
-       var newShow: UIBarButtonItem = UIBarButtonItem(title: "test", style: UIBarButtonItemStyle.plain, target: self, action:nil)
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationBar.barStyle = UIBarStyle.blackOpaque
+        self.navigationBar.tintColor = UIColor.blue
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        let bar = self.navigationController?.navigationBar
+        bar?.barStyle = UIBarStyle.blackOpaque
+        bar?.tintColor = UIColor.white
+        bar?.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.red]
         
-        self.navigationItem.leftBarButtonItem = newShow
-        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {

@@ -9,11 +9,22 @@
 import UIKit
 
 class DetailViewController: UIViewController {
+    
     var showTitle = ""
+    
     @IBOutlet weak var titleLabel: UILabel!
+    
+    var descriptionShow = ""
+    
+    @IBOutlet weak var descriptionLabel: UILabel!
+    
+    var show: TvShowClass?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        title = showTitle
         titleLabel.text = showTitle
+        descriptionLabel.text = descriptionShow
        
     }
 
@@ -23,6 +34,13 @@ class DetailViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        let bar = self.navigationController?.navigationBar
+        bar?.barStyle = UIBarStyle.blackOpaque
+        bar?.tintColor = UIColor.red
+        bar?.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.red]
+    }
 
     /*
     // MARK: - Navigation

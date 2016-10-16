@@ -37,8 +37,8 @@
                                             <color key="highlightedColor" red="0.59112823010000004" green="0.068708531559999994" blue="0.032933358099999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </label>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="dardevil.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="CVc-O7-iBq">
-                                            <frame key="frameInset" minX="17" minY="14" width="31.70%" maxY="13"/>
-                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES"/>
+                                            <frame key="frameInset" minX="17" minY="14" width="113.5" height="145.5"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES"/>
                                         </imageView>
                                     </subviews>
                                 </tableViewCellContentView>
@@ -73,9 +73,21 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fVm-8F-vhu">
-                                <frame key="frameInset" minX="16" minY="131" width="42" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fVm-8F-vhu">
+                                <frame key="frameInset" minX="137" minY="72" width="222" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="dardevil.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="2Fu-aX-dhy">
+                                <frame key="frameInset" minX="16" minY="72" width="113.5" height="145.5"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qow-MF-Efi">
+                                <frame key="frameInset" minX="16" minY="248" width="95.54%" height="5.25%"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -85,6 +97,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="2aC-BT-SR9"/>
                     <connections>
+                        <outlet property="descriptionLabel" destination="qow-MF-Efi" id="MrD-g1-yVj"/>
                         <outlet property="titleLabel" destination="fVm-8F-vhu" id="xV0-lg-FBw"/>
                     </connections>
                 </viewController>
@@ -158,10 +171,10 @@
             </objects>
             <point key="canvasLocation" x="116" y="447"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Navigation View Controller-->
         <scene sceneID="Sjn-bY-w3c">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="tlL-q1-xXw" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="tlL-q1-xXw" customClass="NavigationViewController" customModule="SwagFlix" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="tYa-oa-WpE">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>

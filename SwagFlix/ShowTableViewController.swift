@@ -13,7 +13,7 @@ class ShowTableViewController: UITableViewController {
     var shows : [String] = ["Luke Cage","Dardevil","Orange is the new Black","Narcos","Sens8","Strange Things","Sherlock","Jessica Jones", "Iron Fist"]
     
     var indentifier : String = "reuseIdentifier"
-    var newShow: UIBarButtonItem = UIBarButtonItem(title: "Ajouter", style: UIBarButtonItemStyle.plain, target: self, action:#selector(ShowTableViewController.goToAddShow(_:)))
+    var newShow: UIBarButtonItem = UIBarButtonItem(title: "Ajouter", style: UIBarButtonItemStyle.plain, target: self, action:nil)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,17 +26,13 @@ class ShowTableViewController: UITableViewController {
         navigationItem.rightBarButtonItem = newShow
     
         
-        let logo = UIImage(named: "icon-bar.png")
+        let logo = UIImage(named: "swagflixbar.png")
         let imageview = UIImageView(image: logo)
         self.navigationItem.titleView = imageview
-        //title = "SWAGFLIX"
         print("Shows"+String(shows.count))
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
         tableView.delegate = self
         tableView.dataSource = self
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+      
     }
     
     
@@ -45,9 +41,7 @@ class ShowTableViewController: UITableViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    func goToAddShow(_ sender: AnyObject) {
-        print("GO")
-    }
+
 
     // MARK: - Table view data source
 
@@ -81,6 +75,7 @@ class ShowTableViewController: UITableViewController {
         let detail = self.storyboard?.instantiateViewController(withIdentifier: "DetailViewController") as! DetailViewController
         //Passing Data Between Controllers 
         detail.showTitle = shows[indexPath.item]
+        detail.descriptionShow = "Rediffusion des speedruns commentés lors de la Geneva Gaming Convention du 8 et 9 octobre 2016.The Legend of Zelda - The Windwaker par Kryptek"
         self.navigationController?.pushViewController(detail, animated: true)
     }
     
