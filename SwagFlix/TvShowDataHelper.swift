@@ -114,12 +114,14 @@ class TvShowDataHelper {
     // -----------
     // Insert
     
-    func addTvShow(myTvShowClass: TvShowClass){
+    func addTvShow(myTvShowClass: TvShowClass)->NSManagedObject{
         var tvShow = NSEntityDescription.insertNewObject(forEntityName: "TvShow", into: self.context!) as! TvShow
 
         tvShow = self.getTvShowFromClass(myTvShowClass: myTvShowClass, myTvShow: tvShow)
         
         try? self.context?.save()
+        
+        return tvShow as NSManagedObject
     }
     
     // -----------
@@ -130,9 +132,9 @@ class TvShowDataHelper {
             self.context?.object(with: myTvShowClass.id!).setValue(myTvShowClass.title, forKey: "title_show")
             self.context?.object(with: myTvShowClass.id!).setValue(myTvShowClass.desc, forKey: "description_show")
             self.context?.object(with: myTvShowClass.id!).setValue(myTvShowClass.picture, forKey: "picture_show")
-            self.context?.object(with: myTvShowClass.id!).setValue(NSNumber(value: myTvShowClass.day_out!), forKey: "frequency_out_show")
-            self.context?.object(with: myTvShowClass.id!).setValue(NSNumber(value: myTvShowClass.day_out!), forKey: "day_out_show")
-            self.context?.object(with: myTvShowClass.id!).setValue(NSNumber(value: myTvShowClass.hour_alert!), forKey: "hour_alert_show")
+            self.context?.object(with: myTvShowClass.id!).setValue(myTvShowClass.day_out, forKey: "frequency_out_show")
+            self.context?.object(with: myTvShowClass.id!).setValue(myTvShowClass.day_out, forKey: "day_out_show")
+            self.context?.object(with: myTvShowClass.id!).setValue(myTvShowClass.hour_alert, forKey: "hour_alert_show")
             self.context?.object(with: myTvShowClass.id!).setValue(NSNumber(value: myTvShowClass.fav!), forKey: "fav_show")
         }catch{
             print("Error lors de la modification de la serie televisée")
@@ -191,9 +193,9 @@ class TvShowDataHelper {
         myTvShow.title_show = myTvShowClass.title
         myTvShow.description_show = myTvShowClass.desc
         myTvShow.picture_show = myTvShowClass.picture
-        myTvShow.day_out_show = myTvShowClass.day_out!
-        myTvShow.frequency_out_show = myTvShowClass.frequecy_out!
-        myTvShow.hour_alert_show = myTvShowClass.hour_alert!
+        myTvShow.day_out_show = myTvShowClass.day_out
+        myTvShow.frequency_out_show = myTvShowClass.frequecy_out
+        myTvShow.hour_alert_show = myTvShowClass.hour_alert
         myTvShow.fav_show = myTvShowClass.fav!
         
         return myTvShow
@@ -201,9 +203,9 @@ class TvShowDataHelper {
     
     
     func getTvShowClassFromModel(myTvShowClass: TvShowClass, myTvShow: TvShow)->TvShowClass{
-        myTvShowClass.title = myTvShow.title_show
-        myTvShowClass.desc = myTvShow.description_show
-        myTvShowClass.picture = myTvShow.picture_show
+        myTvShowClass.title = myTvShow.title_show!
+        myTvShowClass.desc = myTvShow.description_show!
+        myTvShowClass.picture = myTvShow.picture_show!
         myTvShowClass.day_out = myTvShow.day_out_show
         myTvShowClass.frequecy_out = myTvShow.frequency_out_show
         myTvShowClass.hour_alert = myTvShow.hour_alert_show

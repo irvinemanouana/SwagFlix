@@ -17,7 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
 
-        let dataHelper = TvShowDataHelper.sharedInstance
+        //let dataHelper = TvShowDataHelper.sharedInstance
         
         
         //--------------------------------
@@ -38,12 +38,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         //--------------------------------
         //Affichage
         //--------------------------------
-        dataHelper.displpayAllTvShow()
+        //dataHelper.displpayAllTvShow()
         
         //--------------------------------
         //Recuperation
         //--------------------------------
-        let tvShowsClass :[TvShowClass] = dataHelper.getAllTvShows();
+        //let tvShowsClass :[TvShowClass] = dataHelper.getAllTvShows();
         
         //--------------------------------
         //Suppression d'un element (le dernier)
@@ -56,10 +56,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         //--------------------------------
         //Mise a jour d'un element (le dernier)
         //--------------------------------
+        /*
         if(tvShowsClass.count>0){
             tvShowsClass.last!.title = "Professeur SWAGGY"
             dataHelper.updateTvShow(myTvShowClass: tvShowsClass.last!)
         }
+        */
+        
+        IQKeyboardManager.sharedManager().enable = true;
         
         return true
     }

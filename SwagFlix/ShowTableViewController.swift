@@ -13,7 +13,6 @@ class ShowTableViewController: UITableViewController {
     var shows : [String] = ["Luke Cage","Dardevil","Orange is the new Black","Narcos","Sens8","Strange Things","Sherlock","Jessica Jones", "Iron Fist"]
     
     var indentifier : String = "reuseIdentifier"
-    var newShow: UIBarButtonItem = UIBarButtonItem(title: "Ajouter", style: UIBarButtonItemStyle.plain, target: self, action:nil)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,20 +22,29 @@ class ShowTableViewController: UITableViewController {
         for show in tvShows{
             shows.append(String(describing: show.title))
         }
-        navigationItem.rightBarButtonItem = newShow
         
         let logo = UIImage(named: "icon-bar.png")
         let imageview = UIImageView(image: logo)
         self.navigationItem.titleView = imageview
         //title = "SWAGFLIX"
-        print("Shows"+String(shows.count))
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
         tableView.delegate = self
         tableView.dataSource = self
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        
+        //let btnTest = UIBarButtonItem(title: "Ok", style: UIBarButtonItemStyle.done, target: self, action: #selector(ShowTableViewController.pushToView))
+        //navigationItem.leftBarButtonItem = btnTest
     }
+    
+    /*
+    func pushToView(){
+        print("Button tapped")
+                
+        let myView : AddShowViewController = AddShowViewController()
+        self.navigationController?.pushViewController(myView, animated: true)
+    }
+    */
+    
     
     
     override func didReceiveMemoryWarning() {
