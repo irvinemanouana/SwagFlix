@@ -11,9 +11,7 @@
 		0908DCFF1D9D5A9A003801C2 /* TvShow+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0908DCFD1D9D5A9A003801C2 /* TvShow+CoreDataProperties.swift */; };
 		095EFF051DADC82E004DB999 /* TvShowClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 095EFF031DADC82E004DB999 /* TvShowClass.swift */; };
 		095EFF061DADC82E004DB999 /* TvShowDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 095EFF041DADC82E004DB999 /* TvShowDataHelper.swift */; };
-<<<<<<< HEAD
-		9D0026B61DB3B83600089B24 /* swagflixbar.png in Resources */ = {isa = PBXBuildFile; fileRef = 9D0026B51DB3B83600089B24 /* swagflixbar.png */; };
-=======
+
 		095EFFA01DB4FCB9004DB999 /* IQNSArray+Sort.swift in Sources */ = {isa = PBXBuildFile; fileRef = 095EFF8A1DB4FCB9004DB999 /* IQNSArray+Sort.swift */; };
 		095EFFA11DB4FCB9004DB999 /* IQUIScrollView+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 095EFF8B1DB4FCB9004DB999 /* IQUIScrollView+Additions.swift */; };
 		095EFFA21DB4FCB9004DB999 /* IQUITextFieldView+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 095EFF8C1DB4FCB9004DB999 /* IQUITextFieldView+Additions.swift */; };
@@ -31,7 +29,6 @@
 		095EFFAE1DB4FCB9004DB999 /* IQToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 095EFF9C1DB4FCB9004DB999 /* IQToolbar.swift */; };
 		095EFFAF1DB4FCB9004DB999 /* IQUIView+IQKeyboardToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 095EFF9D1DB4FCB9004DB999 /* IQUIView+IQKeyboardToolbar.swift */; };
 		095EFFB01DB4FCB9004DB999 /* IQKeyboardManager.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 095EFF9F1DB4FCB9004DB999 /* IQKeyboardManager.bundle */; };
->>>>>>> views_perso
 		9D1BD78F1D9C37F3007C00BD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D1BD78E1D9C37F3007C00BD /* AppDelegate.swift */; };
 		9D1BD7941D9C37F3007C00BD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D1BD7921D9C37F3007C00BD /* Main.storyboard */; };
 		9D1BD7971D9C37F3007C00BD /* SwagFlix.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9D1BD7951D9C37F3007C00BD /* SwagFlix.xcdatamodeld */; };
@@ -55,9 +52,6 @@
 		0908DCFD1D9D5A9A003801C2 /* TvShow+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TvShow+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		095EFF031DADC82E004DB999 /* TvShowClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TvShowClass.swift; sourceTree = "<group>"; };
 		095EFF041DADC82E004DB999 /* TvShowDataHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TvShowDataHelper.swift; sourceTree = "<group>"; };
-<<<<<<< HEAD
-		9D0026B51DB3B83600089B24 /* swagflixbar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = swagflixbar.png; sourceTree = "<group>"; };
-=======
 		095EFF8A1DB4FCB9004DB999 /* IQNSArray+Sort.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "IQNSArray+Sort.swift"; sourceTree = "<group>"; };
 		095EFF8B1DB4FCB9004DB999 /* IQUIScrollView+Additions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "IQUIScrollView+Additions.swift"; sourceTree = "<group>"; };
 		095EFF8C1DB4FCB9004DB999 /* IQUITextFieldView+Additions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "IQUITextFieldView+Additions.swift"; sourceTree = "<group>"; };
@@ -76,7 +70,6 @@
 		095EFF9C1DB4FCB9004DB999 /* IQToolbar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IQToolbar.swift; sourceTree = "<group>"; };
 		095EFF9D1DB4FCB9004DB999 /* IQUIView+IQKeyboardToolbar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "IQUIView+IQKeyboardToolbar.swift"; sourceTree = "<group>"; };
 		095EFF9F1DB4FCB9004DB999 /* IQKeyboardManager.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = IQKeyboardManager.bundle; sourceTree = "<group>"; };
->>>>>>> views_perso
 		9D1BD78B1D9C37F3007C00BD /* SwagFlix.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwagFlix.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D1BD78E1D9C37F3007C00BD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9D1BD7931D9C37F3007C00BD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -237,10 +230,6 @@
 				9D1BD79A1D9C37F3007C00BD /* LaunchScreen.storyboard */,
 				9D1BD79D1D9C37F3007C00BD /* Info.plist */,
 				9D969CEA1DAA6FFE00EE2BF0 /* localizable.strings */,
-<<<<<<< HEAD
-=======
-				9D6E688A1DAEE507001FCE89 /* AddShowViewController.swift */,
->>>>>>> views_perso
 			);
 			path = SwagFlix;
 			sourceTree = "<group>";

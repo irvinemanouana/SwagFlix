@@ -22,21 +22,15 @@ class ShowTableViewController: UITableViewController {
         for show in tvShows{
             shows.append(String(describing: show.title))
         }
-<<<<<<< HEAD
-        navigationItem.rightBarButtonItem = newShow
-    
-=======
->>>>>>> views_perso
         
         let logo = UIImage(named: "swagflixbar.png")
         let imageview = UIImageView(image: logo)
         self.navigationItem.titleView = imageview
-<<<<<<< HEAD
+        
         print("Shows"+String(shows.count))
         tableView.delegate = self
         tableView.dataSource = self
       
-=======
         //title = "SWAGFLIX"
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -53,7 +47,6 @@ class ShowTableViewController: UITableViewController {
                 
         let myView : AddShowViewController = AddShowViewController()
         self.navigationController?.pushViewController(myView, animated: true)
->>>>>>> views_perso
     }
     */
     
