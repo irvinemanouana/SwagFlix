@@ -13,7 +13,6 @@ class ShowTableViewController: UITableViewController {
     var shows : [String] = ["Luke Cage","Dardevil","Orange is the new Black","Narcos","Sens8","Strange Things","Sherlock","Jessica Jones", "Iron Fist"]
     
     var indentifier : String = "reuseIdentifier"
-    var newShow: UIBarButtonItem = UIBarButtonItem(title: "Ajouter", style: UIBarButtonItemStyle.plain, target: self, action:nil)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,17 +22,41 @@ class ShowTableViewController: UITableViewController {
         for show in tvShows{
             shows.append(String(describing: show.title))
         }
+<<<<<<< HEAD
         navigationItem.rightBarButtonItem = newShow
     
+=======
+>>>>>>> views_perso
         
         let logo = UIImage(named: "swagflixbar.png")
         let imageview = UIImageView(image: logo)
         self.navigationItem.titleView = imageview
+<<<<<<< HEAD
         print("Shows"+String(shows.count))
         tableView.delegate = self
         tableView.dataSource = self
       
+=======
+        //title = "SWAGFLIX"
+        // Uncomment the following line to preserve selection between presentations
+        // self.clearsSelectionOnViewWillAppear = false
+        tableView.delegate = self
+        tableView.dataSource = self
+        
+        //let btnTest = UIBarButtonItem(title: "Ok", style: UIBarButtonItemStyle.done, target: self, action: #selector(ShowTableViewController.pushToView))
+        //navigationItem.leftBarButtonItem = btnTest
     }
+    
+    /*
+    func pushToView(){
+        print("Button tapped")
+                
+        let myView : AddShowViewController = AddShowViewController()
+        self.navigationController?.pushViewController(myView, animated: true)
+>>>>>>> views_perso
+    }
+    */
+    
     
     
     override func didReceiveMemoryWarning() {
