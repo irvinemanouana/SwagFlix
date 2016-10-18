@@ -26,7 +26,7 @@ class DetailViewController: UIViewController {
         title = showTitle
         titleLabel.text = showTitle
         descriptionLabel.text = descriptionShow
-        showImage.loadImageFromUrl("http://lestoilesheroiques.fr/wp-content/uploads/2015/09/luke-cage-tournage-serie-netflix-marvel-shoot.jpg")
+        
     }
 
     override func didReceiveMemoryWarning() {
