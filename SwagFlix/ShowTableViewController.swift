@@ -10,6 +10,7 @@ import UIKit
 
 class ShowTableViewController: UITableViewController {
     
+    
     var shows : [String] = ["Luke Cage","Dardevil","Orange is the new Black","Narcos","Sens8","Strange Things","Sherlock","Jessica Jones", "Iron Fist"]
     
     var indentifier : String = "reuseIdentifier"
@@ -81,7 +82,7 @@ class ShowTableViewController: UITableViewController {
         // Configure the cell...
         cell.titleShow.text = shows[indexPath.row]
         //cell.titleShow.adjustsFontSizeToFitWidth = true
-        cell.descriptionShow.text = shows[indexPath.row]
+        cell.descriptionShow.text = "Transformé en colosse surpuissant à la peau impénétrable après avoir été le cobaye d'une expérience sabotée, Luke Cage s'enfuit et tente de recommencer à zéro dans le Harlem d'aujourd'hui, à New York. Bientôt tiré de l'ombre, il va devoir se battre pour le cœur de sa ville dans un combat qui l'oblige à affronter un passé qu'il espérait avoir enterré."
 
         return cell
     }

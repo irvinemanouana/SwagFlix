@@ -11,7 +11,6 @@
 		0908DCFF1D9D5A9A003801C2 /* TvShow+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0908DCFD1D9D5A9A003801C2 /* TvShow+CoreDataProperties.swift */; };
 		095EFF051DADC82E004DB999 /* TvShowClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 095EFF031DADC82E004DB999 /* TvShowClass.swift */; };
 		095EFF061DADC82E004DB999 /* TvShowDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 095EFF041DADC82E004DB999 /* TvShowDataHelper.swift */; };
-
 		095EFFA01DB4FCB9004DB999 /* IQNSArray+Sort.swift in Sources */ = {isa = PBXBuildFile; fileRef = 095EFF8A1DB4FCB9004DB999 /* IQNSArray+Sort.swift */; };
 		095EFFA11DB4FCB9004DB999 /* IQUIScrollView+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 095EFF8B1DB4FCB9004DB999 /* IQUIScrollView+Additions.swift */; };
 		095EFFA21DB4FCB9004DB999 /* IQUITextFieldView+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 095EFF8C1DB4FCB9004DB999 /* IQUITextFieldView+Additions.swift */; };
@@ -29,12 +28,12 @@
 		095EFFAE1DB4FCB9004DB999 /* IQToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 095EFF9C1DB4FCB9004DB999 /* IQToolbar.swift */; };
 		095EFFAF1DB4FCB9004DB999 /* IQUIView+IQKeyboardToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 095EFF9D1DB4FCB9004DB999 /* IQUIView+IQKeyboardToolbar.swift */; };
 		095EFFB01DB4FCB9004DB999 /* IQKeyboardManager.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 095EFF9F1DB4FCB9004DB999 /* IQKeyboardManager.bundle */; };
+		9D123B1A1DB633F400170261 /* UIImage+Downloading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D123B191DB633F400170261 /* UIImage+Downloading.swift */; };
 		9D1BD78F1D9C37F3007C00BD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D1BD78E1D9C37F3007C00BD /* AppDelegate.swift */; };
 		9D1BD7941D9C37F3007C00BD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D1BD7921D9C37F3007C00BD /* Main.storyboard */; };
 		9D1BD7971D9C37F3007C00BD /* SwagFlix.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9D1BD7951D9C37F3007C00BD /* SwagFlix.xcdatamodeld */; };
 		9D1BD7991D9C37F3007C00BD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9D1BD7981D9C37F3007C00BD /* Assets.xcassets */; };
 		9D1BD79C1D9C37F3007C00BD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D1BD79A1D9C37F3007C00BD /* LaunchScreen.storyboard */; };
-		9D6682DB1DB4FC7900C2E1CC /* app_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 9D6682DA1DB4FC7900C2E1CC /* app_icon.png */; };
 		9D6E688B1DAEE507001FCE89 /* AddShowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D6E688A1DAEE507001FCE89 /* AddShowViewController.swift */; };
 		9D969CEB1DAA6FFE00EE2BF0 /* localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9D969CEA1DAA6FFE00EE2BF0 /* localizable.strings */; };
 		9D969CED1DAA721300EE2BF0 /* ShowTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D969CEC1DAA721300EE2BF0 /* ShowTableViewCell.swift */; };
@@ -70,6 +69,7 @@
 		095EFF9C1DB4FCB9004DB999 /* IQToolbar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IQToolbar.swift; sourceTree = "<group>"; };
 		095EFF9D1DB4FCB9004DB999 /* IQUIView+IQKeyboardToolbar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "IQUIView+IQKeyboardToolbar.swift"; sourceTree = "<group>"; };
 		095EFF9F1DB4FCB9004DB999 /* IQKeyboardManager.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = IQKeyboardManager.bundle; sourceTree = "<group>"; };
+		9D123B191DB633F400170261 /* UIImage+Downloading.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Downloading.swift"; sourceTree = "<group>"; };
 		9D1BD78B1D9C37F3007C00BD /* SwagFlix.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwagFlix.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D1BD78E1D9C37F3007C00BD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9D1BD7931D9C37F3007C00BD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -115,7 +115,6 @@
 			isa = PBXGroup;
 			children = (
 				9D6682DA1DB4FC7900C2E1CC /* app_icon.png */,
-				9D0026B51DB3B83600089B24 /* swagflixbar.png */,
 				9D969CEE1DAA816F00EE2BF0 /* dardevil.jpg */,
 				9DF2A2E81DA7E7540083F9F6 /* icon-bar.png */,
 				9DF2A2E41DA7E2730083F9F6 /* swagflix_1.png */,
@@ -197,6 +196,14 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		9D123B181DB633C300170261 /* extensions */ = {
+			isa = PBXGroup;
+			children = (
+				9D123B191DB633F400170261 /* UIImage+Downloading.swift */,
+			);
+			name = extensions;
+			sourceTree = "<group>";
+		};
 		9D1BD7821D9C37F2007C00BD = {
 			isa = PBXGroup;
 			children = (
@@ -218,6 +225,7 @@
 		9D1BD78D1D9C37F3007C00BD /* SwagFlix */ = {
 			isa = PBXGroup;
 			children = (
+				9D123B181DB633C300170261 /* extensions */,
 				9D3075851DB4CC2600C8EAD4 /* CustomCell */,
 				9D3075841DB4CBE900C8EAD4 /* Controller */,
 				9D1BD78E1D9C37F3007C00BD /* AppDelegate.swift */,
@@ -318,7 +326,6 @@
 				9D969CEB1DAA6FFE00EE2BF0 /* localizable.strings in Resources */,
 				9D1BD79C1D9C37F3007C00BD /* LaunchScreen.storyboard in Resources */,
 				9D1BD7991D9C37F3007C00BD /* Assets.xcassets in Resources */,
-				9D0026B61DB3B83600089B24 /* swagflixbar.png in Resources */,
 				9D969CEF1DAA816F00EE2BF0 /* dardevil.jpg in Resources */,
 				9D6682DB1DB4FC7900C2E1CC /* app_icon.png in Resources */,
 				9D1BD7941D9C37F3007C00BD /* Main.storyboard in Resources */,
@@ -360,6 +367,7 @@
 				095EFFA21DB4FCB9004DB999 /* IQUITextFieldView+Additions.swift in Sources */,
 				095EFFA51DB4FCB9004DB999 /* IQUIWindow+Hierarchy.swift in Sources */,
 				095EFFAA1DB4FCB9004DB999 /* IQTextView.swift in Sources */,
+				9D123B1A1DB633F400170261 /* UIImage+Downloading.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

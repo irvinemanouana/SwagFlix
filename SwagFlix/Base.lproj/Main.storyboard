@@ -10,34 +10,35 @@
         <scene sceneID="TZY-oT-C4c">
             <objects>
                 <tableViewController storyboardIdentifier="ShowTableViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="d5w-La-qp1" customClass="ShowTableViewController" customModule="SwagFlix" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="173" sectionHeaderHeight="28" sectionFooterHeight="28" id="aIc-qO-0wQ">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="202" sectionHeaderHeight="28" sectionFooterHeight="28" id="aIc-qO-0wQ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="reuseIdentifier" selectionStyle="default" indentationWidth="10" reuseIdentifier="reuseIdentifier" rowHeight="173" id="BAy-7S-3bD" customClass="ShowTableViewCell" customModule="SwagFlix" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="92" width="375" height="173"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="reuseIdentifier" selectionStyle="default" indentationWidth="10" reuseIdentifier="reuseIdentifier" rowHeight="202" id="BAy-7S-3bD" customClass="ShowTableViewCell" customModule="SwagFlix" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="92" width="375" height="202"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="BAy-7S-3bD" id="mUg-mF-LkZ">
-                                    <frame key="frameInset" width="375" height="172"/>
+                                    <frame key="frameInset" width="375" height="201.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Titre" textAlignment="justified" lineBreakMode="characterWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a81-s7-RCf">
-                                            <frame key="frameInset" minX="139" minY="8" width="96.61%" maxY="130"/>
+                                            <frame key="frameInset" minX="139" minY="8" width="96.61%" maxY="130.5"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES"/>
                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
                                             <color key="textColor" red="0.59112823009490967" green="0.068708531558513641" blue="0.03293335810303688" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="description" textAlignment="justified" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tpV-EF-Isv">
-                                            <frame key="frameInset" minX="139" minY="37" width="96.61%" maxY="92"/>
-                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES"/>
-                                            <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
-                                            <color key="textColor" red="0.59112823010000004" green="0.068708531559999994" blue="0.032933358099999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" preservesSuperviewLayoutMargins="YES" layoutMarginsFollowReadableWidth="YES" text="description" textAlignment="justified" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tpV-EF-Isv">
+                                            <frame key="frameInset" minX="139" minY="62" maxX="8" maxY="12.5"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
+                                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             <color key="highlightedColor" red="0.59112823010000004" green="0.068708531559999994" blue="0.032933358099999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </label>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="dardevil.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="CVc-O7-iBq">
-                                            <frame key="frameInset" minX="17" minY="14" width="113.5" height="145.5"/>
+                                            <frame key="frameInset" minX="17" minY="40" width="113.5" height="145.5"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES"/>
                                         </imageView>
                                     </subviews>
@@ -66,7 +67,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="95y-CQ-cWc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1239" y="-296"/>
+            <point key="canvasLocation" x="1237.5999999999999" y="-296.40179910044981"/>
         </scene>
         <!--Detail View Controller-->
         <scene sceneID="t3G-Kz-NPK">
@@ -92,7 +93,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qow-MF-Efi">
-                                <frame key="frameInset" minX="16" minY="248" width="95.40%" height="4.89%"/>
+                                <frame key="frameInset" minX="16" minY="248" width="95.27%" height="4.65%"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -105,6 +106,7 @@
                     <navigationItem key="navigationItem" id="2aC-BT-SR9"/>
                     <connections>
                         <outlet property="descriptionLabel" destination="qow-MF-Efi" id="MrD-g1-yVj"/>
+                        <outlet property="showImage" destination="2Fu-aX-dhy" id="0AC-dm-ISo"/>
                         <outlet property="titleLabel" destination="fVm-8F-vhu" id="xV0-lg-FBw"/>
                     </connections>
                 </viewController>
@@ -238,11 +240,11 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="1TN-B1-DdR" customClass="NavigationViewController" customModule="SwagFlix" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Qgq-Ro-XKd">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" id="Qgq-Ro-XKd">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <color key="barTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
