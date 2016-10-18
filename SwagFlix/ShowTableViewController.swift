@@ -14,12 +14,14 @@ class ShowTableViewController: UITableViewController {
     var shows : [String] = ["Luke Cage","Dardevil","Orange is the new Black","Narcos","Sens8","Strange Things","Sherlock","Jessica Jones", "Iron Fist"]
     
     var indentifier : String = "reuseIdentifier"
+    var showsList :[TvShow]?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         let dataHelper = TvShowDataHelper.sharedInstance
         let tvShows :[TvShowClass] = dataHelper.getAllTvShows()
+        showsList = dataHelper.getAllTvShows()
         for show in tvShows{
             shows.append(String(describing: show.title))
         }
@@ -69,7 +71,7 @@ class ShowTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return self.shows.count
+        return self.showsList!.count
     }
 
     
@@ -80,9 +82,9 @@ class ShowTableViewController: UITableViewController {
         
 
         // Configure the cell...
-        cell.titleShow.text = shows[indexPath.row]
+        cell.titleShow.text = showsList?[indexPath.row].title_show
         //cell.titleShow.adjustsFontSizeToFitWidth = true
-        cell.descriptionShow.text = "Transformé en colosse surpuissant à la peau impénétrable après avoir été le cobaye d'une expérience sabotée, Luke Cage s'enfuit et tente de recommencer à zéro dans le Harlem d'aujourd'hui, à New York. Bientôt tiré de l'ombre, il va devoir se battre pour le cœur de sa ville dans un combat qui l'oblige à affronter un passé qu'il espérait avoir enterré."
+        cell.descriptionShow.text = showsList?[indexPath.row].description_show
 
         return cell
     }

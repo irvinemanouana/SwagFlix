@@ -14,6 +14,7 @@ class AddShowViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
         return 1
     }
 
+    @IBOutlet weak var urlImage: UITextField!
 
     @IBOutlet weak var titleTxtView: UITextField!
     @IBOutlet weak var descriptionTxtView: UITextView!
@@ -119,8 +120,9 @@ class AddShowViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
         let notificationString : String = notificationSelected!
         let dayOutString : String = daySelected!
         let descriptionString : String = descriptionTxtView.text
+        let imageString : String = urlImage.text!
         
-        if titleString.isEmpty || frequenceString.isEmpty || notificationString.isEmpty || dayOutString.isEmpty || descriptionString.isEmpty{
+        if titleString.isEmpty || frequenceString.isEmpty || notificationString.isEmpty || dayOutString.isEmpty || descriptionString.isEmpty || imageString.isEmpty{
             let alert = UIAlertController(title: "Attention", message: "Merci de remplir le formulaire correctement", preferredStyle: UIAlertControllerStyle.alert)
             alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil))
             self.present(alert, animated: true, completion: nil)
@@ -128,7 +130,7 @@ class AddShowViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
         else{
             let dataHelper = TvShowDataHelper.sharedInstance
             
-            let myTvShow = TvShowClass(title: titleString, desc: descriptionString, picture: titleString, day_out: daySelected!, frequecy_out: frequenceSelected!, hour_alert: notificationSelected!, fav: 0)
+            let myTvShow = TvShowClass(title: titleString, desc: descriptionString, picture: imageString, day_out: daySelected!, frequecy_out: frequenceSelected!, hour_alert: notificationSelected!, fav: 0)
 
             let currentview = self
             let object = dataHelper.addTvShow(myTvShowClass: myTvShow)

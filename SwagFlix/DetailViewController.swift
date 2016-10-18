@@ -20,6 +20,7 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var descriptionLabel: UILabel!
     
     var show: TvShowClass?
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
