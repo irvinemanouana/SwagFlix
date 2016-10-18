@@ -16,10 +16,16 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var titleLabel: UILabel!
     
     var descriptionShow = ""
-    
+    var imageToLoad = ""
+    @IBOutlet weak var day: UILabel!
+    var daytxt = ""
+    @IBOutlet weak var frequence: UILabel!
+    var frequencetxt = ""
+    @IBOutlet weak var hourShow: UILabel!
+    var hourtxt = ""
     @IBOutlet weak var descriptionLabel: UILabel!
     
-    var show: TvShowClass?
+    var show: TvShowClass? = nil
 
     
     override func viewDidLoad() {
@@ -27,7 +33,10 @@ class DetailViewController: UIViewController {
         title = showTitle
         titleLabel.text = showTitle
         descriptionLabel.text = descriptionShow
-        showImage.loadImageFromUrl("http://lestoilesheroiques.fr/wp-content/uploads/2015/09/luke-cage-tournage-serie-netflix-marvel-shoot.jpg")
+        hourShow.text = "Notification : "+hourtxt
+        day.text = "Jour : "+daytxt
+        frequence.text = frequencetxt
+        showImage.loadImageFromUrl(imageToLoad)
     }
 
     override func didReceiveMemoryWarning() {

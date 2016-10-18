@@ -11,7 +11,6 @@ import UIKit
 class ShowTableViewController: UITableViewController {
     
     
-    var shows : [String] = ["Luke Cage","Dardevil","Orange is the new Black","Narcos","Sens8","Strange Things","Sherlock","Jessica Jones", "Iron Fist"]
     
     var indentifier : String = "reuseIdentifier"
     var showsList :[TvShow]?
@@ -20,21 +19,17 @@ class ShowTableViewController: UITableViewController {
         super.viewDidLoad()
         
         let dataHelper = TvShowDataHelper.sharedInstance
-        let tvShows :[TvShowClass] = dataHelper.getAllTvShows()
+        
         showsList = dataHelper.getAllTvShows()
-        for show in tvShows{
-            shows.append(String(describing: show.title))
-        }
+       
         
         let logo = UIImage(named: "swagflixbar.png")
         let imageview = UIImageView(image: logo)
         self.navigationItem.titleView = imageview
-        
-        print("Shows"+String(shows.count))
+    
         tableView.delegate = self
         tableView.dataSource = self
-      
-        //title = "SWAGFLIX"
+     
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
         tableView.delegate = self
@@ -42,6 +37,14 @@ class ShowTableViewController: UITableViewController {
         
         //let btnTest = UIBarButtonItem(title: "Ok", style: UIBarButtonItemStyle.done, target: self, action: #selector(ShowTableViewController.pushToView))
         //navigationItem.leftBarButtonItem = btnTest
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        let bar = self.navigationController?.navigationBar
+        bar?.barStyle = UIBarStyle.blackOpaque
+        bar?.tintColor = UIColor.red
+        bar?.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.red]
     }
     
     /*
@@ -79,22 +82,28 @@ class ShowTableViewController: UITableViewController {
         let withIdentifier = "reuseIdentifier"
         //let cell = tableView.dequeueReusableCell(withIdentifier: withIdentifier, for: indexPath)
           let cell = tableView.dequeueReusableCell(withIdentifier: withIdentifier, for: indexPath) as! ShowTableViewCell
-        
 
         // Configure the cell...
         cell.titleShow.text = showsList?[indexPath.row].title_show
         //cell.titleShow.adjustsFontSizeToFitWidth = true
         cell.descriptionShow.text = showsList?[indexPath.row].description_show
+        cell.imageShow.loadImageFromUrl((showsList?[indexPath.row].picture_show)!)
 
         return cell
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print(shows[indexPath.item])
+       
         let detail = self.storyboard?.instantiateViewController(withIdentifier: "DetailViewController") as! DetailViewController
         //Passing Data Between Controllers 
-        detail.showTitle = shows[indexPath.item]
-        detail.descriptionShow = "Rediffusion des speedruns commentés lors de la Geneva Gaming Convention du 8 et 9 octobre 2016.The Legend of Zelda - The Windwaker par Kryptek"
+        detail.showTitle = (showsList?[indexPath.item].title_show)!
+        detail.descriptionShow = (showsList?[indexPath.item].description_show)!
+        detail.hourtxt = (showsList?[indexPath.item].hour_alert_show)!
+        detail.daytxt = (showsList?[indexPath.item].day_out_show)!
+        detail.imageToLoad = (showsList?[indexPath.item].picture_show)!
+        detail.frequencetxt = (showsList?[indexPath.item].frequency_out_show)!
+
+
         self.navigationController?.pushViewController(detail, animated: true)
     }
     
@@ -114,6 +123,9 @@ class ShowTableViewController: UITableViewController {
         if editingStyle == .delete {
             // Delete the row from the data source
             //tableView.deleteRows(at: [indexPath], with: .fade)
+            let dataHelper = TvShowDataHelper.sharedInstance
+            dataHelper.deleteTvShow(myTvShow: (showsList?[indexPath.item])!)
+            
             print("tu supprimes ici Nour")
         }
     }
