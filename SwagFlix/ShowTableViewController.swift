@@ -130,18 +130,21 @@ class ShowTableViewController: UITableViewController {
         if editingStyle == .delete {
             // Delete the row from the data source
             //tableView.deleteRows(at: [indexPath], with: .fade)
+            
+            
+            let theTitle:String = (showsList?[indexPath.item])!.title_show!
+            removeNotif(title : theTitle)
+            
+            
             let dataHelper = TvShowDataHelper.sharedInstance
             dataHelper.deleteTvShow(myTvShow: (showsList?[indexPath.item])!)
             self.showsList?.remove(at: indexPath.item)
-            
-            removeNotif(title : (showsList?[indexPath.item])!.title_show!)
             
             self.tableView.reloadData()
             let alert = UIAlertController(title: "Suppression", message: "La série a bien été supprimée", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { (alert: UIAlertAction) in
                 self.dismiss(animated: true, completion: nil)
             }))
-            print("tu supprimes ici Nour")
         }
     }
    
@@ -151,7 +154,6 @@ class ShowTableViewController: UITableViewController {
             let notification = oneEvent as UILocalNotification
             let userInfoCurrent = notification.userInfo! as! [String:AnyObject]
             let uid = userInfoCurrent["title"]! as! String
-            print(uid)
             if uid == title {
                 app.cancelLocalNotification(notification)
                 break;
