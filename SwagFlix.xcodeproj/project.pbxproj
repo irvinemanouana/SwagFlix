@@ -28,6 +28,8 @@
 		095EFFAE1DB4FCB9004DB999 /* IQToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 095EFF9C1DB4FCB9004DB999 /* IQToolbar.swift */; };
 		095EFFAF1DB4FCB9004DB999 /* IQUIView+IQKeyboardToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 095EFF9D1DB4FCB9004DB999 /* IQUIView+IQKeyboardToolbar.swift */; };
 		095EFFB01DB4FCB9004DB999 /* IQKeyboardManager.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 095EFF9F1DB4FCB9004DB999 /* IQKeyboardManager.bundle */; };
+		9D0739EB1DB79A3C0023AF13 /* FavorisTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D0739EA1DB79A3C0023AF13 /* FavorisTableViewController.swift */; };
+		9D0739ED1DB7A7E80023AF13 /* star.png in Resources */ = {isa = PBXBuildFile; fileRef = 9D0739EC1DB7A7E80023AF13 /* star.png */; };
 		9D123B1A1DB633F400170261 /* UIImage+Downloading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D123B191DB633F400170261 /* UIImage+Downloading.swift */; };
 		9D1BD78F1D9C37F3007C00BD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D1BD78E1D9C37F3007C00BD /* AppDelegate.swift */; };
 		9D1BD7941D9C37F3007C00BD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D1BD7921D9C37F3007C00BD /* Main.storyboard */; };
@@ -69,6 +71,8 @@
 		095EFF9C1DB4FCB9004DB999 /* IQToolbar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IQToolbar.swift; sourceTree = "<group>"; };
 		095EFF9D1DB4FCB9004DB999 /* IQUIView+IQKeyboardToolbar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "IQUIView+IQKeyboardToolbar.swift"; sourceTree = "<group>"; };
 		095EFF9F1DB4FCB9004DB999 /* IQKeyboardManager.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = IQKeyboardManager.bundle; sourceTree = "<group>"; };
+		9D0739EA1DB79A3C0023AF13 /* FavorisTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavorisTableViewController.swift; sourceTree = "<group>"; };
+		9D0739EC1DB7A7E80023AF13 /* star.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = star.png; sourceTree = "<group>"; };
 		9D123B191DB633F400170261 /* UIImage+Downloading.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Downloading.swift"; sourceTree = "<group>"; };
 		9D1BD78B1D9C37F3007C00BD /* SwagFlix.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwagFlix.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D1BD78E1D9C37F3007C00BD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -114,6 +118,7 @@
 		095EFF081DADC8AF004DB999 /* img */ = {
 			isa = PBXGroup;
 			children = (
+				9D0739EC1DB7A7E80023AF13 /* star.png */,
 				9D6682DA1DB4FC7900C2E1CC /* app_icon.png */,
 				9D969CEE1DAA816F00EE2BF0 /* dardevil.jpg */,
 				9DF2A2E81DA7E7540083F9F6 /* icon-bar.png */,
@@ -249,6 +254,7 @@
 				9D6E688A1DAEE507001FCE89 /* AddShowViewController.swift */,
 				9DF2A2E01DA7A50A0083F9F6 /* NavigationViewController.swift */,
 				9DE89DD81DA58E52009F7905 /* ShowTableViewController.swift */,
+				9D0739EA1DB79A3C0023AF13 /* FavorisTableViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -321,13 +327,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				9DF2A2E61DA7E2730083F9F6 /* swagflix_1.png in Resources */,
+				9D0739ED1DB7A7E80023AF13 /* star.png in Resources */,
 				9DF2A2E71DA7E2730083F9F6 /* swagflix-2.png in Resources */,
 				9DF2A2E91DA7E7540083F9F6 /* icon-bar.png in Resources */,
 				9D969CEB1DAA6FFE00EE2BF0 /* localizable.strings in Resources */,
 				9D1BD79C1D9C37F3007C00BD /* LaunchScreen.storyboard in Resources */,
 				9D1BD7991D9C37F3007C00BD /* Assets.xcassets in Resources */,
 				9D969CEF1DAA816F00EE2BF0 /* dardevil.jpg in Resources */,
-				9D6682DB1DB4FC7900C2E1CC /* app_icon.png in Resources */,
 				9D1BD7941D9C37F3007C00BD /* Main.storyboard in Resources */,
 				095EFFB01DB4FCB9004DB999 /* IQKeyboardManager.bundle in Resources */,
 			);
@@ -347,6 +353,7 @@
 				0908DCFF1D9D5A9A003801C2 /* TvShow+CoreDataProperties.swift in Sources */,
 				9D1BD7971D9C37F3007C00BD /* SwagFlix.xcdatamodeld in Sources */,
 				095EFFA31DB4FCB9004DB999 /* IQUIView+Hierarchy.swift in Sources */,
+				9D0739EB1DB79A3C0023AF13 /* FavorisTableViewController.swift in Sources */,
 				095EFF061DADC82E004DB999 /* TvShowDataHelper.swift in Sources */,
 				095EFFA91DB4FCB9004DB999 /* IQKeyboardReturnKeyHandler.swift in Sources */,
 				095EFFA11DB4FCB9004DB999 /* IQUIScrollView+Additions.swift in Sources */,

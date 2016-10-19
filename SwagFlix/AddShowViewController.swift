@@ -132,14 +132,15 @@ class AddShowViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
             
             let myTvShow = TvShowClass(title: titleString, desc: descriptionString, picture: imageString, day_out: daySelected!, frequecy_out: frequenceSelected!, hour_alert: notificationSelected!, fav: 0)
 
-            let currentview = self
+            
             let object = dataHelper.addTvShow(myTvShowClass: myTvShow)
             if(object != nil){
                 let alert = UIAlertController(title: "Attention", message: "Votre série a bien été ajoutée", preferredStyle: UIAlertControllerStyle.alert)
                 alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { (alert: UIAlertAction) in
-                    currentview.dismiss(animated: true, completion: nil)
+                    self.dismiss(animated: true, completion: nil)
                 }))
                 self.present(alert, animated: true, completion: nil)
+                
             }
         }
     }

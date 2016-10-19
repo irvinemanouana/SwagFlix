@@ -15,6 +15,10 @@ class ShowTableViewController: UITableViewController {
     var indentifier : String = "reuseIdentifier"
     var showsList :[TvShow]?
     
+    @IBAction func goToFav(_ sender: AnyObject) {
+        let fav = self.storyboard?.instantiateViewController(withIdentifier: "FavorisTableViewController") as! FavorisTableViewController
+         self.navigationController?.pushViewController(fav, animated: true)
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -22,16 +26,11 @@ class ShowTableViewController: UITableViewController {
         
         showsList = dataHelper.getAllTvShows()
        
-        
         let logo = UIImage(named: "swagflixbar.png")
         let imageview = UIImageView(image: logo)
         self.navigationItem.titleView = imageview
-    
-        tableView.delegate = self
-        tableView.dataSource = self
-     
         // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
+        self.clearsSelectionOnViewWillAppear = false
         tableView.delegate = self
         tableView.dataSource = self
         
@@ -56,7 +55,12 @@ class ShowTableViewController: UITableViewController {
     }
     */
     
-    
+    override func viewDidAppear(_ animated: Bool) {
+        let dataHelper = TvShowDataHelper.sharedInstance
+        showsList = dataHelper.getAllTvShows()
+        tableView.reloadData()
+        print("OKEY")
+    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -108,7 +112,6 @@ class ShowTableViewController: UITableViewController {
     }
     
    
-    
 
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
@@ -125,7 +128,12 @@ class ShowTableViewController: UITableViewController {
             //tableView.deleteRows(at: [indexPath], with: .fade)
             let dataHelper = TvShowDataHelper.sharedInstance
             dataHelper.deleteTvShow(myTvShow: (showsList?[indexPath.item])!)
-            
+            self.showsList?.remove(at: indexPath.item)
+            self.tableView.reloadData()
+            let alert = UIAlertController(title: "Suppression", message: "La série a bien été supprimée", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { (alert: UIAlertAction) in
+                self.dismiss(animated: true, completion: nil)
+            }))
             print("tu supprimes ici Nour")
         }
     }

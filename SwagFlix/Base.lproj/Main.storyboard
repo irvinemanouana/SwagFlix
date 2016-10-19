@@ -57,6 +57,12 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="zxo-xP-emA">
+                        <barButtonItem key="leftBarButtonItem" image="star.png" id="YZo-so-jL2">
+                            <color key="tintColor" red="0.80000000000000004" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="goToFav:" destination="d5w-La-qp1" id="Izn-Ta-qmd"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" style="done" systemItem="add" id="FnH-AL-C1u">
                             <color key="tintColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
@@ -93,7 +99,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qow-MF-Efi">
-                                <frame key="frameInset" minX="16" minY="299" width="95.27%" height="40.49%"/>
+                                <frame key="frameInset" minX="16" minY="299" width="95.27%" height="50.14%"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
@@ -136,7 +142,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LqR-zN-Hve" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3741.5999999999999" y="-90.404797601199405"/>
+            <point key="canvasLocation" x="3756" y="447"/>
         </scene>
         <!--Add Show View Controller-->
         <scene sceneID="xWs-gV-Q77">
@@ -154,21 +160,21 @@
                                 <frame key="frameInset" minX="23" minY="404" width="152.5" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="23"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
+                                <color key="textColor" red="0.9753071665763855" green="0.22652921080589294" blue="0.14005458354949951" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="highlightedColor" red="0.52373421192169189" green="0.062635920941829681" blue="0.026815617457032204" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Description :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zsX-ss-JQZ">
                                 <frame key="frameInset" minX="23" minY="480" width="129" height="27.5"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="23"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.98333936929702759" green="0.20145663619041443" blue="0.099473051726818085" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Frequence :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W54-0Q-hMz">
                                 <frame key="frameInset" minX="23" minY="230" width="121" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="23"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.98333936929702759" green="0.20145663619041443" blue="0.099473051726818085" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="5fD-ar-eff">
@@ -182,7 +188,7 @@
                                 <frame key="frameInset" minX="23" minY="317" width="221" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="23"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.98336750268936157" green="0.19301530718803406" blue="0.093528337776660919" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JM1-UT-RqH">
@@ -208,14 +214,14 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Titre" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="edd-37-XpR">
-                                <frame key="frameInset" minX="23" minY="18.52%" height="30" maxX="29"/>
+                                <frame key="frameInset" minX="23" minY="18.45%" height="30" maxX="29"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                         </subviews>
-                        <color key="backgroundColor" red="0.9564583333333333" green="0.9564583333333333" blue="0.9564583333333333" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <navigationItem key="navigationItem" id="2EX-4k-2WX">
                         <barButtonItem key="leftBarButtonItem" style="done" systemItem="cancel" id="ntd-5i-T7i">
@@ -243,6 +249,57 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kkt-Cm-kXu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1480.8" y="470.91454272863569"/>
+        </scene>
+        <!--Favoris Table View Controller-->
+        <scene sceneID="Yqp-3g-jj3">
+            <objects>
+                <tableViewController storyboardIdentifier="FavorisTableViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="dP6-3r-vRb" customClass="FavorisTableViewController" customModule="SwagFlix" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="173" sectionHeaderHeight="28" sectionFooterHeight="28" id="NFB-UA-fze">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="reuseIdentifier" selectionStyle="default" indentationWidth="10" reuseIdentifier="reuseIdentifier" rowHeight="173" id="dpm-t9-UeX" customClass="ShowTableViewCell" customModule="SwagFlix" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="92" width="375" height="173"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="dpm-t9-UeX" id="j5I-oQ-NYZ">
+                                    <frame key="frameInset" width="375" height="172"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="dardevil.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="jFB-LG-vca">
+                                            <frame key="frameInset" minX="15" minY="14" width="113.5" height="145.5"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES"/>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" preservesSuperviewLayoutMargins="YES" layoutMarginsFollowReadableWidth="YES" text="description" textAlignment="justified" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ghh-Nh-hxY">
+                                            <frame key="frameInset" minX="137" minY="59" maxX="8" maxY="12"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
+                                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="highlightedColor" red="0.59112823010000004" green="0.068708531559999994" blue="0.032933358099999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Titre" textAlignment="justified" lineBreakMode="characterWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4jG-Kd-wSI">
+                                            <frame key="frameInset" minX="137" minY="18" width="96.64%" maxY="121"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                            <color key="textColor" red="0.59112823010000004" green="0.068708531559999994" blue="0.032933358099999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="dP6-3r-vRb" id="7Cz-01-pri"/>
+                            <outlet property="delegate" destination="dP6-3r-vRb" id="sV4-bU-Pu8"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="xFI-Le-g9A"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bcM-8N-O8D" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2425" y="1209"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="eDE-g3-EdE">
@@ -298,8 +355,27 @@
             </objects>
             <point key="canvasLocation" x="2738" y="447"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="wiJ-jw-BMc">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="PrA-ZS-Af7" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="5AL-oy-diA">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="dP6-3r-vRb" kind="relationship" relationship="rootViewController" id="1Ni-ph-MLp"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IcO-9M-Y6m" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1481" y="1209"/>
+        </scene>
     </scenes>
     <resources>
         <image name="dardevil.jpg" width="450" height="600"/>
+        <image name="star.png" width="16" height="16"/>
     </resources>
 </document>
