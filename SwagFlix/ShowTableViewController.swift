@@ -33,6 +33,10 @@ class ShowTableViewController: UITableViewController {
         self.clearsSelectionOnViewWillAppear = false
         tableView.delegate = self
         tableView.dataSource = self
+
+        
+        //self.title = "SwagFlix"
+
         
         //let btnTest = UIBarButtonItem(title: "Ok", style: UIBarButtonItemStyle.done, target: self, action: #selector(ShowTableViewController.pushToView))
         //navigationItem.leftBarButtonItem = btnTest
@@ -129,6 +133,9 @@ class ShowTableViewController: UITableViewController {
             let dataHelper = TvShowDataHelper.sharedInstance
             dataHelper.deleteTvShow(myTvShow: (showsList?[indexPath.item])!)
             self.showsList?.remove(at: indexPath.item)
+            
+            removeNotif(title : (showsList?[indexPath.item])!.title_show!)
+            
             self.tableView.reloadData()
             let alert = UIAlertController(title: "Suppression", message: "La série a bien été supprimée", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { (alert: UIAlertAction) in
@@ -138,6 +145,20 @@ class ShowTableViewController: UITableViewController {
         }
     }
    
+    func removeNotif(title: String){
+        let app:UIApplication = UIApplication.shared
+        for oneEvent in app.scheduledLocalNotifications! {
+            let notification = oneEvent as UILocalNotification
+            let userInfoCurrent = notification.userInfo! as! [String:AnyObject]
+            let uid = userInfoCurrent["title"]! as! String
+            print(uid)
+            if uid == title {
+                app.cancelLocalNotification(notification)
+                break;
+            }
+        }
+    }
+    
     override func tableView(_ tableView: UITableView, titleForDeleteConfirmationButtonForRowAt indexPath: IndexPath) -> String? {
         return "Supprimer"
     }
